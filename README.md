@@ -380,4 +380,6 @@ Ordering Mix = rbe.EBTPCW3Factory
 The follwing command shows an example case. This runs 400 concurrent users with Browsing workload mix. The ramp-up time is 60 seconds, measuring interval (interval in which the perfomance metrics are measured) is 300 seconds and there is a ramp-down (warm-down) period of 60 seconds.
 
 ```bash
+java rbe.RBE -EB rbe.EBTPCW1Factory 400 -OUT data.m -RU 60 -MI 360 -RD 60 -ITEM 1000 -TT 0.1 -MAXERROR 0 -WWW http://IP_address:8080/tpcw/
+
 ```
