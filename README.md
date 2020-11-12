@@ -237,9 +237,30 @@ And add in the ned before </tomcat-users>
 ```
 # Setting up Configurations
 
+**Configure TPC-W**
+
+cd ../java-tpcw/
+
+nano tpcw.properties 
+And change the JDBC settings like this:
+
+#jdbc.path=jdbc\:mysql\://localhost\:3306/std?user\=tpcw&password\=pswd
+jdbc.path=jdbc\:mysql\://10.11.0.6\:3306/std?user\=tpcw&password\=pswd
+Change the num.item and num.eb as you like. For example:
+
+num.item=100000
+num.eb=100
+
 You need configure some properties using tpcw.properties and main.properties files which is located in the tpc-w directory. tpcw.properties contains properties directly related to TPC-W web application whereas main.properties contains other properties. Go ahead and update the properties in both files. (The properties are self explanatory.)
 
-Inside main.properties:
+To set the java packages into the main.property file. So first run these two commands and take note of the full name of these two packages.
+
+```bash
+ls /usr/share/java/*servlet*
+ls /usr/share/java/*mysql*
+```
+
+Then add the paths inside main.properties:
 
 #<!-- Path to servlet.jar, change this ... -->
 cpServ=/usr/share/java/servlet-api-3.0.jar
@@ -248,10 +269,12 @@ cpServ=/usr/share/java/servlet-api-3.0.jar
 cpJDBC=/usr/share/java/mysql.jar
 
 #<!-- Directory where tpcw.war will be put with task 'inst' -->
-webappDir=/opt/tomcat/webapps
+webappDir=/var/lib/tomcat7/webapps
 
 Inside tpcw.properties:
 You may need to change the user and password of the jdbc.path. Also you might want to adjust the jdbc.connPoolMax according to your requirement.
+
+**Configure MySQL**
 
 After these adjustments are done, navigate to /etc/mysql/mysql.conf.d and run
 
