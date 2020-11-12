@@ -94,6 +94,11 @@ cd /opt
 wget https://www.mirrorservice.org/sites/ftp.apache.org/tomcat/tomcat-9/v9.0.39/bin/apache-tomcat-9.0.39.tar.gz
 ```
 
+Now you have to extract the file in /opt directory:
+
+```bash
+sudo tar -xzvf apache-tomcat-9.0.39.tar.gz
+```
 Now you have to change the owenership of tomcat directory to the tomcat user and group@
 
 ```bash
