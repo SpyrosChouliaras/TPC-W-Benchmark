@@ -235,6 +235,12 @@ And add in the ned before </tomcat-users>
 <user username="admin" password="password" roles="manager-gui"/>
 </tomcat-users>
 ```
+
+Finally restart the serivce 
+
+```bash
+systemctl restart apache-tomcat
+```
 # Setting up Configurations
 
 **Configure TPC-W**
