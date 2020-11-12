@@ -21,7 +21,7 @@ You also need to install java and set homepath
 
 # Install MySQL Database
 
-```console
+```bash
 sudo apt-get update
 
 sudo apt-get install libmysqlclient20
