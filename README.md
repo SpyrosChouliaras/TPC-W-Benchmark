@@ -19,7 +19,7 @@ Check java version:
 java -version
 ```
 
-I use openjdk version "1.8.0_272"
+I used **openjdk version "1.8.0_272"**
 
 Add the path to the environment:
 
