@@ -380,8 +380,11 @@ java rbe.RBE
 This will give a quick overview of how to run the clients. In order to specify the type of workload mix (Browsing, Shopping, or Ordering) you can use the following as EB Factory argument.
 
 Browsing Mix = rbe.EBTPCW1Factory
+
 Shopping Mix = rbe.EBTPCW2Factory
+
 Ordering Mix = rbe.EBTPCW3Factory
+
 
 The follwing command shows an example case. This runs 400 concurrent users with Browsing workload mix. The ramp-up time is 60 seconds, measuring interval (interval in which the perfomance metrics are measured) is 300 seconds and there is a ramp-down (warm-down) period of 60 seconds.
 
